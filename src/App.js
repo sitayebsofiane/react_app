@@ -5,7 +5,7 @@ import TestComponent from './TestComponent';
 class App extends Component{
     render(){
       return (
-      <TestComponent></TestComponent>
+      <TestComponent nomProp=" bruno"/>
     );
     }
   }
