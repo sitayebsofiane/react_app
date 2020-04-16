@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Car = ({children,color})=>{
+const Car = ({children,color,year})=>{
         const colorInfo = color ? ( <p>{color}</p>):( <p>neat</p>);
 
         if(children)
@@ -9,14 +9,11 @@ const Car = ({children,color})=>{
            
                <h3>{children}</h3>
                 <h4>{colorInfo}</h4>
+                <h4>{year}</h4>
            </div>
         )
         return (
-            <div style={ {backgroundColor: 'pink',color :'white'} }>
-                <h1> Hello React </h1>
-                <p>pas de data</p>
-                 
-            </div>
+           null
          )
     
 }
