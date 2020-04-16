@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class TestComponent extends Component{
     constructor(){
         super();
@@ -11,12 +10,13 @@ class TestComponent extends Component{
     addOne(){
         this.setState({
           count: this.state.count+1  
-        })
+        });
     }
     removeOne(){
         this.setState({
             count:this.state.count-1
-        })
+        });
+       
     }
     
     render(){
