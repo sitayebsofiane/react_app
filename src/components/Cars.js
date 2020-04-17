@@ -24,8 +24,8 @@ class Cars extends Component{
       return (
         <Fragment>
         <h1>{this.capitalizeFirstLetter(this.state.titre)}</h1>
-        <table className="table">
         <button onClick={this.addTenYears}>+ 10 ans</button>
+        <table className="table">
         <tr>
           <th>Marque</th>
           <th>Couleur</th>

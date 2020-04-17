@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Car = ({nom,color,year})=>{
-        const colorInfo = color ? ( <p>{color}</p>):( <p>neat</p>);
+        const colorInfo = color ? ( `${color}`):( 'neat');
 
         if(nom)
         return (
