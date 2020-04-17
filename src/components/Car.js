@@ -5,12 +5,12 @@ const Car = ({nom,color,year})=>{
 
         if(nom)
         return (
-           <div style={ {backgroundColor: 'pink',color :'white'} }>
+           <tr style={ {backgroundColor: 'pink',color :'white'} }>
            
-               <h3>{nom}</h3>
-                <h4>{colorInfo}</h4>
-                <h5>{year}</h5>
-           </div>
+               <td>{nom}</td>
+                <td>{colorInfo}</td>
+                <td>{year}</td>
+           </tr>
         )
         return (
            null

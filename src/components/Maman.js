@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Toto from './Enfant';
 class Maman extends Component{
     state={
@@ -24,13 +24,13 @@ class Maman extends Component{
     }
     render(){
         return(
-            <div>
+            <Fragment>
               <h1>Maman</h1>
               <button onClick={this.orderMaman}>ordre de la mère</button>
               <p>{this.state.messageMaman}</p>
               <hr/>
               <Toto name='bruno' responseEnfant = {this.responseEnfant} leState={this.state}/>
-            </div>
+            </Fragment>
         )
     }
 }

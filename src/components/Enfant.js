@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Toto=(props)=>{
     
     const btnResponseEnfant=props.leState.messageMaman?(<button onClick={props.responseEnfant}>Repense</button>):(<button disabled>Repense</button>)
         return (
-        <div>
+        <Fragment>
            <h2>{props.name}</h2>
            {btnResponseEnfant}
            <p>{props.leState.messageEnfant}</p>
-        </div>
+        </Fragment>
     )
 }
 export default Toto;
