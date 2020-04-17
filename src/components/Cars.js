@@ -22,7 +22,7 @@ class Cars extends Component{
     }
     render(){
       return (
-        <Fragment>
+        <>
         <h1>{this.capitalizeFirstLetter(this.state.titre)}</h1>
         <button onClick={this.addTenYears}>+ 10 ans</button>
         <table className="table">
@@ -41,7 +41,7 @@ class Cars extends Component{
                })
              }
         </table>
-        </Fragment>
+        </>
     );
     }
   }
