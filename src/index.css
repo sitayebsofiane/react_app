@@ -3,7 +3,3 @@ body {
     margin: 20px;
     background-color: rgb(251, 235, 0);
   }
-h1.styled {
-  color:red;
-  text-transform: uppercase;
-}

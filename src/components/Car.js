@@ -9,7 +9,7 @@ const Car = ({nom,color,year})=>{
            
                <h3>{nom}</h3>
                 <h4>{colorInfo}</h4>
-                <h4>{year}</h4>
+                <h5>{year}</h5>
            </div>
         )
         return (
