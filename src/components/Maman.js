@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Toto from './Enfant';
+import Enfant from './Enfant';
 class Maman extends Component{
     state={
         messageMaman:null,
@@ -28,8 +28,7 @@ class Maman extends Component{
               <h1>Maman</h1>
               <button onClick={this.orderMaman}>ordre de la mère</button>
               <p>{this.state.messageMaman}</p>
-              <hr/>
-              <Toto name='bruno' responseEnfant = {this.responseEnfant} leState={this.state}/>
+              <Enfant name='bruno' responseEnfant = {this.responseEnfant} leState={this.state}/>
             </Fragment>
         )
     }

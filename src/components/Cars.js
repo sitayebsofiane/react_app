@@ -34,6 +34,7 @@ class Cars extends Component{
         </tr>
         </thead>
         <tbody>
+        
              {
                this.state.voitures.map((voiture,index)=>{
                  return(
@@ -43,6 +44,7 @@ class Cars extends Component{
                  )
                })
              }
+             
         </tbody>
         </table>
         </>
