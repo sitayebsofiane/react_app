@@ -4,23 +4,23 @@ import Maman from './components/Maman';
 import Display from './components/Display';
 import Form from './components/Form';
 
-class App extends Component{
+class App extends Component {
 
-    render(){
-      // var membre={un:'mark',deux:'lea',trois:'justine'};
-      // var {...rest}=membre;
-      // console.log(rest);
-      return (
-        <div>
-          <Cars/>
-          <hr/>
-          <Maman/>
-          <hr/>
-          <Display/>
-          <hr/>
-          <Form/>
-        </div>
+  render() {
+    // var membre={un:'mark',deux:'lea',trois:'justine'};
+    // var {...rest}=membre;
+    // console.log(rest);
+    return (
+      <div >
+        <Cars />
+        <hr />
+        <Maman />
+        <hr />
+        <Display />
+        <hr />
+        <Form />
+      </div>
     );
-    }
   }
+}
 export default App;
