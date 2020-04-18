@@ -2,7 +2,7 @@ import React from 'react';
 
 const Car = ({nom,color,year})=>{
         const colorInfo = color ? ( `${color}`):( 'neat');
-
+        
         if(nom)
         return (
            <tr style={ {backgroundColor: 'pink',color :'white'} }>

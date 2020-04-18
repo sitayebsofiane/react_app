@@ -26,11 +26,14 @@ class Cars extends Component{
         <h1>{this.capitalizeFirstLetter(this.state.titre)}</h1>
         <button onClick={this.addTenYears}>+ 10 ans</button>
         <table className="table">
+        <thead>
         <tr>
           <th>Marque</th>
           <th>Couleur</th>
           <th>Annee</th>
         </tr>
+        </thead>
+        <tbody>
              {
                this.state.voitures.map((voiture,index)=>{
                  return(
@@ -40,6 +43,7 @@ class Cars extends Component{
                  )
                })
              }
+        </tbody>
         </table>
         </>
     );
