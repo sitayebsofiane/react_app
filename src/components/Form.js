@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import Alger from './Alger'
 class Form extends Component{
     render(){
         return(
             <>
-                image ici
+                <Alger/>
                 <h1>Commentaire</h1>
                 Formulaire
             </>
