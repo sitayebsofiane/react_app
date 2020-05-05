@@ -15,7 +15,7 @@ class App extends Component {
         <hr />
         <Display />
         <hr />
-        <Form />
+        <Form head={false}/>
       </>
     );
   }
