@@ -3,18 +3,27 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 const Titre = styled.h1`
             color:red; 
-            font-size:80px;
+            font-size:50px;
                         `
 class Bootstrap extends Component{
    
     constructor(props) {
         super(props);
         this.state={compteur:10, titre:''};
+        console.log("je suis dans le consturcteur")
     }
-    
+    static getDerivedStateFromProps(props,state){
+        console.log('%c getDerivedStateFromProps() lancer','color: red; font-size:20px; background:yellow')
+        console.log(props,state)
+        return null
+    }
+    shouldComponentUpdate(nextProps,nextState){
+        console.log("shouldComponentUpdate ");
+        return true;
+    }
     // il sera executer apres le rendre
     componentDidMount() {
-        var intervalId = setInterval(this.diminuerCompteur, 1000);
+        const intervalId = setInterval(this.diminuerCompteur, 1000);
            
     } 
     componentDidUpdate(prevProps,prevState){
@@ -23,14 +32,15 @@ class Bootstrap extends Component{
     }
     // Diminue le compteur jusqu'à 0
     diminuerCompteur = () =>{
-        if(this.state.compteur>=0)
+        if(this.state.compteur>0){
             this.setState({
                 compteur:this.state.compteur-1
             });
-        if(this.state.compteur===0)
+            if(this.state.compteur===0)
             this.setState({
                 titre:'BOOM'
-            })    
+            })  
+        }  
     }
     
 
@@ -40,7 +50,7 @@ class Bootstrap extends Component{
         return( 
             <> 
                 {titreAffichage}
-                <button className="btn btn-primary"> Valider </button>
+                <button className="btn btn-primary" > {this.props.name} </button>
             </>
         )
     }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Cars from './components/Cars';
-import Maman from './components/Maman';
-import Display from './components/Display';
-import Form from './components/Form';
+import Cars from './componentsApp/Cars';
+import Maman from './componentsApp/Maman';
+import Display from './componentsApp/Display';
+import Form from './componentsApp/Form';
 
 class App extends Component {
 
@@ -15,7 +15,7 @@ class App extends Component {
         <hr />
         <Display />
         <hr />
-        <Form head={false}/>
+        <Form head={false} />
       </>
     );
   }
