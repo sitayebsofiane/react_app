@@ -7,7 +7,7 @@ class App2 extends Component {
     render() {
       return (
         <>
-         <Bootstrap/>
+         <Bootstrap name="Toto"/>
         </>
       );
     }

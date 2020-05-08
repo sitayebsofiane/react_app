@@ -9,33 +9,37 @@ class Bootstrap extends Component{
    
     constructor(props) {
         super(props);
-        this.state={compteur:10, titre:'BOOM'};
-       
+        this.state={compteur:10, titre:''};
     }
-
+    
+    // il sera executer apres le rendre
+    componentDidMount() {
+        var intervalId = setInterval(this.diminuerCompteur, 1000);
+           
+    } 
+    componentDidUpdate(prevProps,prevState){
+        console.log(prevState);
+        console.log(this.state);
+    }
     // Diminue le compteur jusqu'à 0
     diminuerCompteur = () =>{
-        if(this.state.compteur>1)
-        this.setState({
-            compteur:this.state.compteur-1
-        });
-        else{
-            clearInterval(this.interval);
+        if(this.state.compteur>=0)
+            this.setState({
+                compteur:this.state.compteur-1
+            });
+        if(this.state.compteur===0)
             this.setState({
                 titre:'BOOM'
-            })
-        }
+            })    
     }
-    // Diminue le compteur jusqu'à 0
-    interval=()=>{setInterval(this.diminuerCompteur,1500);}
+    
+
     render(){
-        { 
-            this.interval()
-        }
+        console.log(this.state.titre)
+        const titreAffichage=this.state.titre?(<Titre>{this.state.titre}</Titre>):(<Titre>Commentaire Bootstrap <span>{this.state.compteur}</span> seconde(s)....</Titre>);
         return( 
-            <>
-               
-                <Titre> Commentaire Bootstrap  <span>{this.state.compteur}</span> seconde(s)... </Titre>
+            <> 
+                {titreAffichage}
                 <button className="btn btn-primary"> Valider </button>
             </>
         )
