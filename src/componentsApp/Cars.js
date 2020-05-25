@@ -9,7 +9,6 @@ class Cars extends Component{
         {name:'peugeot',color:'green',year:2003}
         ],
         titre:'catalogue'
-
      }
      addTenYears=()=>{
       const updatedState = this.state.voitures.map((param)=> param.year+=10);

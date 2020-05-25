@@ -1,22 +1,20 @@
 
 import React, { Component } from 'react';
-import Bootstrap from './componentsApp2/Bootstrap';
-
+//import Bootstrap from './componentsApp2/Bootstrap';
+//import ParentComp from './componentsApp2/ParentComponent';
+import Profile from './componentsApp2/Profile';
+import {Context} from './componentsApp2/MyContext';
+import {user} from './componentsApp2/MyContext';
 class App2 extends Component {
-    state = {
-      name:"toto"
-    }
-    modifier=()=>{
-      this.setState({
-        name:"lili"
-      })
-    }
+   
     render() {
       return (
-        <>
-         <Bootstrap name={this.state.name}/>
-         <button onClick={this.modifier}>modifier</button>
-        </>
+        <Context.Provider value={user}>
+         {/*<Bootstrap/>*/}
+         {/* <ParentComp/> */}
+         <hr/>
+         <Profile/>
+        </Context.Provider>
       );
     }
   }
